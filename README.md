@@ -1,0 +1,2 @@
+# flutter_baidu_mapapi_plugin
+可以直接使用的flutter 百度地图插件，支持隐私合规
