@@ -19,3 +19,11 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+.idea/
+.gradle/
+Pods/
+.flutter-plugins
+.flutter-plugins-dependencies
+local.properties
+.symlinks/

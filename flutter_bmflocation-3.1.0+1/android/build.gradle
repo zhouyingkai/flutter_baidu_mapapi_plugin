@@ -1,0 +1,45 @@
+group 'com.baidu.flutter_bmflocation'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 32
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion 19
+         ndk {
+             // 设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+             abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
+         }
+    }
+}
+
+dependencies {
+    api 'com.baidu.lbsyun:BaiduMapSDK_Location_All:9.3.5'
+     implementation fileTree(includes: ['*.jar'], dir: 'libs')
+    implementation "androidx.multidex:multidex:2.0.1"
+}
